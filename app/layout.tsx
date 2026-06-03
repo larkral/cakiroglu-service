@@ -1,0 +1,130 @@
+import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "Çakıroğlu Servis | Premium Otomotiv Servisi",
+    template: "%s | Çakıroğlu Servis",
+  },
+
+  description:
+    "BMW, Mercedes-Benz, Porsche, Audi ve Range Rover için premium otomotiv servis ve mühendislik çözümleri. Hassas bakım, performans ve güven bir arada.",
+
+  keywords: [
+    "Afyon Mini Cooper Servisi",
+    "Afyon Hızlı Servis",
+    "Afyon Güvenilir Servis",
+    "Bmw Arıza",
+    "Afyon Bmw Tamiri",
+    "Afyon Mercedes Servisi",
+    "BMW servis",
+    "Mercedes servis",
+    "Porsche servis",
+    "Audi servis",
+    "Range Rover servis",
+    "premium oto servis",
+    "luks araç bakım",
+    "otomotiv mühendislik",
+    "Afyon Bmw Servisi",
+  ],
+
+  authors: [{ name: "Çakıroğlu Servis" }],
+  creator: "Çakıroğlu Servis",
+
+  metadataBase: new URL("https://site-domainin.com"),
+
+  openGraph: {
+    title: "Çakıroğlu Servis | Premium Otomotiv Servisi",
+    description:
+      "BMW, Mercedes-Benz, Porsche, Audi ve Range Rover için üst düzey servis hizmeti.",
+    url: "https://site-domainin.com",
+    siteName: "Çakıroğlu Servis",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Çakıroğlu Servis Premium Garage",
+      },
+    ],
+    locale: "tr_TR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Çakıroğlu Servis",
+    description: "Premium otomotiv servis ve mühendislik hizmetleri",
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export const viewport = {
+  themeColor: "#0B0B0B",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="tr">
+      <body
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
+      >
+        {children}
+
+        {/* ANALYTICS */}
+        {process.env.NODE_ENV === "production" && <Analytics />}
+
+        {/* STRUCTURED DATA (SEO POWER BOOST) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutoRepair",
+              name: "Çakıroğlu Servis",
+              url: "https://site-domainin.com",
+              description:
+                "Premium otomotiv servis ve mühendislik hizmetleri.",
+              areaServed: "TR",
+              serviceType: [
+                "BMW Service",
+                "Mercedes Service",
+                "Porsche Service",
+              ],
+            }),
+          }}
+        />
+      </body>
+    </html>
+  );
+}

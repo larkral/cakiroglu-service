@@ -1,0 +1,162 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Luxury Automotive Palette */
+  --background: oklch(0.98 0.002 90); /* Warm off-white */
+  --foreground: oklch(0.15 0.005 285); /* Soft black */
+  --card: oklch(0.98 0.002 90);
+  --card-foreground: oklch(0.15 0.005 285);
+  --popover: oklch(0.98 0.002 90);
+  --popover-foreground: oklch(0.15 0.005 285);
+  --primary: oklch(0.25 0.005 285); /* Graphite */
+  --primary-foreground: oklch(0.98 0.002 90);
+  --secondary: oklch(0.92 0.002 90); /* Light warm gray */
+  --secondary-foreground: oklch(0.25 0.005 285);
+  --muted: oklch(0.94 0.002 90);
+  --muted-foreground: oklch(0.45 0.005 285);
+  --accent: oklch(0.55 0.12 55); /* Copper accent */
+  --accent-foreground: oklch(0.98 0.002 90);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.002 90);
+  --border: oklch(0.90 0.002 90);
+  --input: oklch(0.90 0.002 90);
+  --ring: oklch(0.55 0.12 55);
+  --chart-1: oklch(0.55 0.12 55);
+  --chart-2: oklch(0.72 0.01 90);
+  --chart-3: oklch(0.25 0.005 285);
+  --chart-4: oklch(0.45 0.005 285);
+  --chart-5: oklch(0.65 0.01 90);
+  --radius: 0.25rem;
+  
+  /* Custom luxury tokens */
+  --graphite: oklch(0.22 0.005 285);
+  --silver: oklch(0.72 0.01 90);
+  --copper: oklch(0.55 0.12 55);
+  --warm-white: oklch(0.98 0.002 90);
+  --off-white: oklch(0.96 0.002 90);
+}
+
+.dark {
+  --background: oklch(0.15 0.005 285);
+  --foreground: oklch(0.98 0.002 90);
+  --card: oklch(0.18 0.005 285);
+  --card-foreground: oklch(0.98 0.002 90);
+  --popover: oklch(0.18 0.005 285);
+  --popover-foreground: oklch(0.98 0.002 90);
+  --primary: oklch(0.98 0.002 90);
+  --primary-foreground: oklch(0.15 0.005 285);
+  --secondary: oklch(0.22 0.005 285);
+  --secondary-foreground: oklch(0.98 0.002 90);
+  --muted: oklch(0.22 0.005 285);
+  --muted-foreground: oklch(0.65 0.005 285);
+  --accent: oklch(0.55 0.12 55);
+  --accent-foreground: oklch(0.98 0.002 90);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.98 0.002 90);
+  --border: oklch(0.25 0.005 285);
+  --input: oklch(0.25 0.005 285);
+  --ring: oklch(0.55 0.12 55);
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-serif: 'Playfair Display', 'Playfair Display Fallback', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-graphite: var(--graphite);
+  --color-silver: var(--silver);
+  --color-copper: var(--copper);
+  --color-warm-white: var(--warm-white);
+  --color-off-white: var(--off-white);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Editorial typography */
+.text-editorial {
+  letter-spacing: -0.02em;
+  font-feature-settings: 'ss01' on, 'ss02' on;
+}
+
+/* Thin typography for luxury feel */
+.font-thin-display {
+  font-weight: 200;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Subtle animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Custom scrollbar for luxury feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--off-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--silver);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--graphite);
+}
