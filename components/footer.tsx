@@ -122,16 +122,27 @@ export function Footer() {
         </motion.div>
       </div>
 
-      {/* ALT ŞERİT */}
-      <div className="relative px-6 md:px-12 lg:px-24 pb-8 pt-4 border-t border-white/10">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-white/40">
-          <span>© {year} Çakıroğlu Servis · Tüm hakları saklıdır.</span>
-          <span className="flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-copper" />
-            Ustalıkla yapılır.
-          </span>
-        </div>
-      </div>
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-white/40 pt-1">
+  <span className="leading-none">
+    © {year} Çakıroğlu Servis · Tüm hakları saklıdır.
+  </span>
+
+    <span className="flex items-center justify-center gap-2 leading-none -translate-y-[1px]">
+      <span className="h-1 w-1 rounded-full bg-copper" />
+
+      <span className="flex items-center gap-1">
+        <a
+          href="https://www.instagram.com/gunarslan.tech/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-copper hover:text-white transition-colors duration-300 hover:drop-shadow-[0_0_6px_rgba(201,140,76,0.6)]"
+        >
+          gunarslan.tech
+        </a>
+        <span>tarafından tasarlanmıştır</span>
+      </span>
+    </span>
+  </div>
     </footer>
   )
 }

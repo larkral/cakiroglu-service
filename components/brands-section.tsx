@@ -18,7 +18,7 @@ const brands: Brand[] = [
   { name: "Mercedes", logo: "/logos/mercedes.svg", country: "Almanya", flag: "🇩🇪", founded: 1926, tagline: "Lüksün mühendislik tanımı." },
   { name: "Audi", logo: "/logos/audi.svg", country: "Almanya", flag: "🇩🇪", founded: 1909, tagline: "Teknolojiyle ilerleyiş." },
   { name: "Volkswagen", logo: "/logos/volkswagen.svg", country: "Almanya", flag: "🇩🇪", founded: 1937, tagline: "Halkın mühendisliği." },
-  { name: "Volvo", logo: "/logos/volvo.svg", country: "İsveç", flag: "🇸🇪", founded: 1927, tagline: "İskandinav güvenliği." },
+  { name: "Land|Rover", logo: "/logos/land-rover.svg", country: "İngiltere", flag: "🇬🇧", founded: 1948, tagline: "Asil-Güçlü-Özgür." },
   { name: "Mini", logo: "/logos/mini.svg", country: "İngiltere", flag: "🇬🇧", founded: 1959, tagline: "İkonik karakter, küçük gövde." },
 ]
 

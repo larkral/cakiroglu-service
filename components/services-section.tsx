@@ -81,7 +81,7 @@ export function ServicesSection() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
             className="group relative bg-background p-8 md:p-10 cursor-pointer rounded-xl overflow-hidden border border-transparent hover:border-copper hover:shadow-lg hover:shadow-copper/30 transition-all"
             onMouseEnter={() => setActiveService(service.id)}
             onMouseLeave={() => setActiveService(null)}
