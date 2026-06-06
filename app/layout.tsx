@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     "BMW, Mercedes-Benz, Porsche, Audi ve Range Rover için premium otomotiv servis ve mühendislik çözümleri. Hassas bakım, performans ve güven bir arada.",
 
   keywords: [
+    "Oto Bakım",
+    "Afyon araç arıza",
     "Afyon Mini Cooper Servisi",
     "Afyon Hızlı Servis",
     "Afyon Güvenilir Servis",
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
     "Audi servis",
     "Range Rover servis",
     "premium oto servis",
-    "luks araç bakım",
+    "lüks araç bakım",
     "otomotiv mühendislik",
     "Afyon Bmw Servisi",
   ],
@@ -45,13 +47,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Çakıroğlu Servis" }],
   creator: "Çakıroğlu Servis",
 
-  metadataBase: new URL("https://site-domainin.com"),
+  metadataBase: new URL("https://cakirogluservis.com"),
 
   openGraph: {
     title: "Çakıroğlu Servis | Premium Otomotiv Servisi",
     description:
       "BMW, Mercedes-Benz, Porsche, Audi ve Range Rover için üst düzey servis hizmeti.",
-    url: "https://site-domainin.com",
+    url: "https://cakirogluservis.com",
     siteName: "Çakıroğlu Servis",
     images: [
       {
@@ -112,7 +114,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "AutoRepair",
               name: "Çakıroğlu Servis",
-              url: "https://site-domainin.com",
+              url: "https://cakirogluservis.com",
               description:
                 "Premium otomotiv servis ve mühendislik hizmetleri.",
               areaServed: "TR",
