@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <sitemap>
-    <loc>https://cakirogluservis.com/sitemap-0.xml</loc>
-  </sitemap>
+  <url>
+    <loc>https://cakirogluservis.com</loc>
+    <lastmod>2026-06-25T21:42:42.808Z</lastmod>
+  </url>
 
-</sitemapindex>
+  <url>
+    <loc>https://cakirogluservis.com/#about</loc>
+  </url>
+
+  <url>
+    <loc>https://cakirogluservis.com/#brands</loc>
+  </url>
+
+  <url>
+    <loc>https://cakirogluservis.com/#services</loc>
+  </url>
+
+  <url>
+    <loc>https://cakirogluservis.com/#contact</loc>
+  </url>
+
+</urlset>
