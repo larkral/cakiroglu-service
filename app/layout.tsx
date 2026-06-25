@@ -27,21 +27,12 @@ export const metadata: Metadata = {
   keywords: [
     "Oto Bakım",
     "Afyon araç arıza",
-    "Afyon Mini Cooper Servisi",
-    "Afyon Hızlı Servis",
-    "Afyon Güvenilir Servis",
-    "Bmw Arıza",
-    "Afyon Bmw Tamiri",
-    "Afyon Mercedes Servisi",
     "BMW servis",
     "Mercedes servis",
     "Porsche servis",
     "Audi servis",
     "Range Rover servis",
     "premium oto servis",
-    "lüks araç bakım",
-    "otomotiv mühendislik",
-    "Afyon Bmw Servisi",
   ],
 
   authors: [{ name: "Çakıroğlu Servis" }],
@@ -77,13 +68,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
@@ -98,6 +82,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
+      <head>
+        {/* Google Search Console Verification */}
+        <meta
+          name="google-site-verification"
+          content="fNQ-7RV8eZ6cnnBLD1TUTtifMD8mS8smNMWICJ4FLHU"
+        />
+      </head>
+
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
