@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://domain.com
+Host: https://cakirogluservis.com<
 
 # Sitemaps
-Sitemap: https://domain.com/sitemap.xml
+Sitemap: https://cakirogluservis.com</sitemap.xml
